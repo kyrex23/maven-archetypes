@@ -27,6 +27,55 @@ mvn archetype:generate [...] # Create a new project using the archetype
 
 ## 📑 Collection of arquetypes
 
+### ➡️ [Arquetype]: vertx-lombok
+
+The `vertx-lombok` archetype allows you to create projects with the following dependencies:
+- `vertx`
+- `rxjava3`
+- `lombok`
+- `slf4j-logback`
+
+<details>
+<summary>Archetype usage:</summary>
+
+```bash
+mvn archetype:generate \
+-DarchetypeGroupId=org.kyrex.archetypes \
+-DarchetypeArtifactId=vertx-lombok \
+-DarchetypeVersion=1.0.0-SNAPSHOT \
+-DgroupId=my.group.id \
+-DartifactId=my-new-artifact \
+-Dversion=my-version \
+-Dpackage=my.package
+# -Dversion is optional (default value: 0.0.1-SNAPSHOT)
+# -Dpackage is optional (default value: my.group.id)
+```
+
+</details>
+
+<details>
+<summary>Archetype result:</summary>
+
+```
+my-new-artifact/
+|__ src/main/
+|   |__ java/my/package/
+|   |   |__ handlers/
+|   |   |   |__ DemoHandler.java
+|   |   |__ verticles/
+|   |   |   |__ MainVerticle.java
+|   |   |__ VertxTest.java
+|   |__ resources/
+|       |__ logback.xml
+|__ .gitignore
+|__ .editorconfig
+|__ pom.xml
+```
+
+</details>
+
+---
+
 ### ➡️ [Arquetype]: spark-simple
 
 The `spark-simple` archetype allows you to create projects with the following dependencies:
