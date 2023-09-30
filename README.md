@@ -110,3 +110,49 @@ my-new-artifact/
 ```
 
 </details>
+
+---
+
+### ➡️ [Arquetype]: javafx-lombok-simple
+
+The `javafx-lombok-simple` archetype allows you to create projects with the following dependencies:
+- `javafx`
+- `lombok`
+- `slf4j-simple`
+
+<details>
+<summary>Archetype usage:</summary>
+
+```bash
+mvn archetype:generate \
+-DarchetypeGroupId=org.kyrex.archetypes \
+-DarchetypeArtifactId=javafx-lombok-simple \
+-DarchetypeVersion=1.0.0-SNAPSHOT \
+-DgroupId=my.group.id \
+-DartifactId=my-new-artifact \
+-Dversion=my-version \
+-Dpackage=my.package
+# -Dversion is optional (default value: 0.0.1-SNAPSHOT)
+# -Dpackage is optional (default value: my.group.id)
+```
+
+</details>
+
+<details>
+<summary>Archetype result:</summary>
+
+```
+my-new-artifact/
+|__ src/main/
+|   |__ java/my/package/
+|   |   |__ JavaFXTest.java
+|   |__ resources/
+|       |__ fxml/
+|       |   |__ javafx_test.fxml
+|       |__ simplelogger.properties
+|__ .gitignore
+|__ .editorconfig
+|__ pom.xml
+```
+
+</details>
