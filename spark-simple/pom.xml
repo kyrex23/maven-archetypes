@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.kyrex.archetypes</groupId>
+	<artifactId>spark-simple</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<packaging>maven-archetype</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.extension.archetype.packaging.version>3.2.1</maven.extension.archetype.packaging.version>
+		<maven.plugin.resources.version>3.2.0</maven.plugin.resources.version>
+		<maven.plugin.archetype.version>3.2.1</maven.plugin.archetype.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${maven.plugin.resources.version}</version>
+				<configuration>
+					<addDefaultExcludes>false</addDefaultExcludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>${maven.plugin.archetype.version}</version>
+				<configuration>
+					<useDefaultExcludes>false</useDefaultExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>${maven.extension.archetype.packaging.version}</version>
+			</extension>
+		</extensions>
+	</build>
+
+</project>
